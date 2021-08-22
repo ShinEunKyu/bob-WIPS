@@ -170,9 +170,9 @@ void print_mac(uint8_t *mac, int rouge)
 
 int packet_scan(pcap_t *_handle, AP_info **ap_info, int *info_size) // WIPS Start
 {
-    char *Device_whitelist = "/home/ubuntu/vscode/.vscode/_WIPS/Device_whitelist.txt"; // Device_whitelist file
-    char *AP_whitelist = "/home/ubuntu/vscode/.vscode/_WIPS/AP_whitelist.txt"; // AP_whitelist file
-    char *SSID_whitelist = "/home/ubuntu/vscode/.vscode/_WIPS/SSID_whitelist.txt"; // SSID_whitelist file
+    char *Device_whitelist = "Device_whitelist.txt"; // Device_whitelist file
+    char *AP_whitelist = "AP_whitelist.txt"; // AP_whitelist file
+    char *SSID_whitelist = "SSID_whitelist.txt"; // SSID_whitelist file
     int Device, AP, SSID;
 
     struct pcap_pkthdr *header;
@@ -474,9 +474,9 @@ int main()
     printf("\n**WIPS**\n\n");
     printf("\033[1;36m< White_list >\033[0m\n\n");
     printf("[Device]\n");
-    file_open("/home/ubuntu/vscode/.vscode/_WIPS/Device_whitelist.txt");
+    file_open("Device_whitelist.txt");
     printf("[AP]\n");
-    file_open("/home/ubuntu/vscode/.vscode/_WIPS/AP_whitelist.txt");
+    file_open("AP_whitelist.txt");
     printf("\n\033[1;36m< Policy >\033[0m\n\n");
     printf(" - Rouge AP/Device\n");
     printf(" - Honey Pot\n");
